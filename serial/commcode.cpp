@@ -41,7 +41,7 @@
 #include "globals.h"
 #include "TapiInfo.h"
 #include "dpspimp.h"
-#include "logit.h"
+#include "../misc/logit.h"
 
 // This is the message posted to the WriteThread
 // When we have something to write.

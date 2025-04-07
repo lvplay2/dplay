@@ -79,7 +79,7 @@
 #include "resource.h"
 // #include "statbar.h"
 // #include "toolbar.h"
-#include <logit.h>
+#include "../misc/logit.h"
 
 HANDLE g_hConnectionEvent = NULL;
 
