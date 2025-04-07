@@ -146,5 +146,3 @@ typedef IDirectPlaySP *( _cdecl * CREATEPROC ) ( LPGUID lpGuid);
 #endif
 
 #endif
-
-

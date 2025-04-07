@@ -8,8 +8,8 @@
 #define _MT
 #endif
 
-#include <dplay.h>
-#include <logit.h>
+#include "dplay.h"
+#include "logit.h"
 
 
 DWORD dwMsgSeq   = 1;

@@ -19,7 +19,7 @@
 
 #include "dplayi.h"
 #include "dpimp.h"
-#include <logit.h>
+#include "logit.h"
 
 
 #define MAX_NUMBER_SP   32
