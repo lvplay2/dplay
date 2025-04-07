@@ -11,9 +11,7 @@
     #include <common.ver>
 
 #else
-    #include "verinfo.h"
-
-    #define VERSIONNAME "dplay.dll"
+    #define VERSIONNAME       "dplay.dll"
 
     #ifdef DEBUG
         #define VERSIONDESCRIPTION "Microsoft DirectPlay Network Service Provider Debug"
@@ -24,5 +22,33 @@
     #define VERSIONTYPE    VFT_DLL
     #define VERSIONSUBTYPE VFT2_UNKNOWN
 
-    #include "verinfo.ver"
+    VS_VERSION_INFO VERSIONINFO
+    FILEVERSION     1,0,0,1
+    PRODUCTVERSION  1,0,0,1
+    FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+    FILEFLAGS       0
+    FILEOS          VOS__WINDOWS32
+    FILETYPE        VERSIONTYPE
+    FILESUBTYPE     VERSIONSUBTYPE
+
+    BEGIN
+        BLOCK "StringFileInfo"
+        BEGIN
+            BLOCK "040904B0"
+            BEGIN
+                VALUE "CompanyName",      "Microsoft Corporation"
+                VALUE "FileDescription",  VERSIONDESCRIPTION
+                VALUE "FileVersion",      "1.0.0.1"
+                VALUE "InternalName",     "dpwsock"
+                VALUE "OriginalFilename", VERSIONNAME
+                VALUE "ProductName",      "Microsoft DirectPlay"
+                VALUE "ProductVersion",   "1.0.0.1"
+            END
+        END
+
+        BLOCK "VarFileInfo"
+        BEGIN
+            VALUE "Translation", 0x0409, 1200
+        END
+    END
 #endif
