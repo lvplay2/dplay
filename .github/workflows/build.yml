@@ -29,7 +29,7 @@ jobs:
         shell: msys2 {0}
         run: |
           windres dplay.rc dplay_res.o
-          gcc -m32 -shared -o dplay.dll dllmain.c dpimp.cpp dplay_res.o dpcreate.cpp -Wl,--out-implib,libmylib.a
+          gcc -m32 -shared -o dplay.dll dllmain.c dpimp.cpp dplay_res.o dpcreate.cpp logit.cpp queue.cpp -Wl,--out-implib,libmylib.a
 
       - name: Upload DLL artifact
         uses: actions/upload-artifact@v4
