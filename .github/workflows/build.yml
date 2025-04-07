@@ -21,7 +21,7 @@ jobs:
 
       - name: Compile DLL
         run: |
-          rc dplay.rc
+          rc dplay\dplay.rc
           cl /LD dplay\*.c dplay\*.cpp /link gdi32.lib dciman32.lib user32.lib kernel32.lib uuid.lib winmm.lib advapi32.lib /OUT:dplay.dll /DEF:dplay\dplay.def
 
       - name: Upload DLL artifact

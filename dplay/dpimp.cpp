@@ -24,7 +24,7 @@
 #include <string.h>
 
 #include "dpimp.h"
-#include "logit.h"
+#include "../misc/logit.h"
 
 #include "resource.h"
 
