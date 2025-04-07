@@ -14,22 +14,16 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Install MSYS2
-        uses: msys2/setup-msys2@v2
+      - name: Setup MSVC x86 environment
+        uses: ilammy/msvc-dev-cmd@v1
         with:
-          msystem: MINGW32
-          install: mingw-w64-i686-gcc
-
-      - name: Check GCC version and arch
-        run: |
-          gcc -v
-          gcc -dumpmachine
+          arch: x86
 
       - name: Compile DLL
         shell: msys2 {0}
         run: |
-          windres dplay.rc dplay_res.o
-          gcc -m32 -shared -o dplay.dll dllmain.c dpimp.cpp dplay_res.o dpcreate.cpp logit.cpp queue.cpp -Wl,--out-implib,libmylib.a
+          rc dplay.rc
+          cl /LD *.c *.cpp /link /OUT:dplay.dll /DEF:dplay.def
 
       - name: Upload DLL artifact
         uses: actions/upload-artifact@v4
