@@ -20,7 +20,6 @@ jobs:
           arch: x86
 
       - name: Compile DLL
-        shell: msys2 {0}
         run: |
           rc dplay.rc
           cl /LD *.c *.cpp /link /OUT:dplay.dll /DEF:dplay.def
