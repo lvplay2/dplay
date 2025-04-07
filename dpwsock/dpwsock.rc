@@ -11,6 +11,8 @@
     #include <common.ver>
 
 #else
+    #include <winver.h>
+
     #define VERSIONNAME       "dplay.dll"
 
     #ifdef DEBUG
