@@ -22,7 +22,7 @@ jobs:
       - name: Compile DLL
         run: |
           rc dplay.rc
-          cl /LD *.c *.cpp /link kernel32.lib user32.lib gdi32.lib advapi32.lib /OUT:dplay.dll /DEF:dplay.def
+          cl /LD *.c *.cpp /link gdi32.lib dciman32.lib user32p.lib kernel32.lib uuid.lib winmm.lib advapi32.lib /OUT:dplay.dll /DEF:dplay.def
 
       - name: Upload DLL artifact
         uses: actions/upload-artifact@v4
