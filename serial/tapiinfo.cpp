@@ -1308,3 +1308,4 @@ void __cdecl OutputDebugPrintf(LPCSTR lpszFormat, ...)
 
     OutputDebugString(szOutput);
 }
+

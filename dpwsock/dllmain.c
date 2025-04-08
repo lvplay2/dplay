@@ -10,7 +10,7 @@
  *
  ***************************************************************************/
 
-#include <windows.h>
+#include "windows.h"
 
 /*
  * DllMain
@@ -37,3 +37,4 @@ BOOL WINAPI DllMain(HINSTANCE hmod, DWORD dwReason, LPVOID lpvReserved)
 
     return TRUE;
 } /* DllMain */
+

@@ -12,3 +12,4 @@
 BOOL StartComm(HANDLE hNewCommFile);
 void StopComm();
 BOOL WriteCommString(LPVOID pszStringToWrite, DWORD nSizeofStringToWrite);
+

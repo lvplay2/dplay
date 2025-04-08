@@ -1,4 +1,4 @@
-// Microsoft Visual C++ generated resource script.
+//Microsoft Visual C++ generated resource script.
 //
 #include "resource.h"
 
@@ -11,10 +11,11 @@
 #include "windows.h"
 #undef APSTUDIO_HIDDEN_SYMBOLS
 #include "winver.h"
-#include <globals.h>
+#include "globals.h"
 
 /////////////////////////////////////////////////////////////////////////////
 #undef APSTUDIO_READONLY_SYMBOLS
+
 
 IDD_DIALDIALOG DIALOG DISCARDABLE  0, 0, 210, 217
 STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
@@ -50,6 +51,8 @@ BEGIN
     GROUPBOX        "Connect Using:",IDC_STATICCONNECTUSING,4,139,203,47
 END
 
+
+
 /////////////////////////////////////////////////////////////////////////////
 //
 // String Table
@@ -65,38 +68,33 @@ BEGIN
     IDS_DIALNEW             "Dial a New Number."
 END
 
-/////////////////////////////////////////////////////////////////////////////
-//
-// Version Info
-//
-VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,1
- PRODUCTVERSION 1,0,0,1
- FILEFLAGSMASK 0x3fL
-#ifdef _DEBUG
- FILEFLAGS VS_FF_DEBUG
+
+#ifdef WINNT
+#include <ntverp.h>
+
+#define VER_FILETYPE              VFT_DLL
+#define VER_FILESUBTYPE           VFT2_UNKNOWN
+#define VER_FILEDESCRIPTION_STR   "Microsoft DirectPlay Modem Service Provider\0"
+#define VER_INTERNALNAME_STR      "dpserial\0"
+#define VER_ORIGINALFILENAME_STR  "dpserial.dll\0"
+
+#include <common.ver>
+
 #else
- FILEFLAGS 0x0L
+#include <version.h>
+#include "verinfo.h"
+
+#define VERSIONNAME               "dpserial.dll\0"
+#ifdef DEBUG
+#define VERSIONDESCRIPTION        "Microsoft DirectPlay Modem Service Provider Debug\0"
+#else
+#define VERSIONDESCRIPTION        "Microsoft DirectPlay Modem Service Provider\0"
 #endif
- FILEOS VOS__WINDOWS32
- FILETYPE VFT_DLL
- FILESUBTYPE VFT2_UNKNOWN
-BEGIN
-    BLOCK "StringFileInfo"
-    BEGIN
-        BLOCK "040904b0"
-        BEGIN
-            VALUE "CompanyName",      "Microsoft Corporation\0"
-            VALUE "FileDescription",  "Microsoft DirectPlay Modem Service Provider\0"
-            VALUE "FileVersion",      "1.0.0.1\0"
-            VALUE "InternalName",     "dpserial\0"
-            VALUE "OriginalFilename", "dpserial.dll\0"
-            VALUE "ProductName",      "Microsoft DirectPlay\0"
-            VALUE "ProductVersion",   "1.0.0.1\0"
-        END
-    END
-    BLOCK "VarFileInfo"
-    BEGIN
-        VALUE "Translation", 0x409, 1200
-    END
-END
+#define VERSIONTYPE               VFT_DLL
+#define VERSIONSUBTYPE            VFT2_UNKNOWN
+
+#include "verinfo.ver"
+#endif
+
+
+

@@ -79,7 +79,7 @@
 #include "resource.h"
 // #include "statbar.h"
 // #include "toolbar.h"
-#include "../misc/logit.h"
+#include <logit.h>
 
 HANDLE g_hConnectionEvent = NULL;
 
@@ -4893,3 +4893,4 @@ INT_PTR CALLBACK DialDialogProc(
 
     return FALSE;
 }
+

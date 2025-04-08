@@ -19,7 +19,7 @@
 #include <string.h>
 
 #include "dpspimp.h"
-#include "../misc/logit.h"
+#include "logit.h"
 
 #include "tapicode.h"
 #include "commcode.h"

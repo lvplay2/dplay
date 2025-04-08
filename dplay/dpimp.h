@@ -135,3 +135,4 @@ private:
             || m_Magic != MAGIC)
 
 #endif
+

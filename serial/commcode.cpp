@@ -41,7 +41,7 @@
 #include "globals.h"
 #include "TapiInfo.h"
 #include "dpspimp.h"
-#include "../misc/logit.h"
+#include "logit.h"
 
 // This is the message posted to the WriteThread
 // When we have something to write.
@@ -1437,3 +1437,4 @@ BOOL HandleCommEvent(LPOVERLAPPED lpOverlappedCommEvent,
     DBG_INFO((DBGARG, TEXT("Unexpected comm event %lx"),*lpfdwEvtMask));
     return FALSE;
 }
+

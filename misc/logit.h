@@ -35,3 +35,4 @@ void LogIt(char *chMsg, char *chFile, UINT uiLine, LOG_TYPE log);
 void LogIt2(char *chFile, UINT uiLine, LOG_TYPE log, LPSTR szFormat, ...);
 
 #endif
+

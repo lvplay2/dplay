@@ -1,6 +1,6 @@
 #include <windows.h>   // required for all Windows applications
 #include "dpspimp.h"
-#include "../misc/logit.h"
+#include "logit.h"
 #include "tapicode.h"
 
 HINSTANCE hInst = NULL;
@@ -129,3 +129,5 @@ LRESULT CALLBACK WndProc(
     }
     return (0);
 }
+
+

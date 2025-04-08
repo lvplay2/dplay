@@ -19,7 +19,7 @@
 #include <string.h>
 
 #include "dpspimp.h"
-#include "../misc/logit.h"
+#include "logit.h"
 
 #define lmalloc(a)  LocalAlloc(LMEM_FIXED, (a))
 #define lfree(a)      LocalFree((HLOCAL)(a))
